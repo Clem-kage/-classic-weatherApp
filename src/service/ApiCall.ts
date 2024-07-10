@@ -24,8 +24,9 @@ const relevantDataOnly = (request:any)=>{
    const dataStructure = {
 	  location : request?.name,
 	  temperature: Number(request?.main?.temp),
-	  description: request?.weather[0].description
-   } as weatherData
+	  description: request?.weather[0].description,
+	  icon: request?.weather[0].icon
+   }
 
   return dataStructure
 }

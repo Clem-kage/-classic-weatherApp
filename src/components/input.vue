@@ -27,14 +27,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="input">
-    <h1>input</h1>
-    <input v-model="searchValue" @input="basicCall" type="text" />
+  <div class="card">
+    <input class="form-floating mb-3" v-model="searchValue"  type="text" />
+    <button @click="basicCall" type="button" class="btn btn-primary">call</button>
   </div>
+
 </template>
 
 <style scoped>
 .input {
-  border: solid red 1px;
+  width: 400px;
 }
 </style>

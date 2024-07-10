@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue-3": "^0.3.12",
     "dotenv": "^16.4.5",
     "lodash": "^4.17.21",
-    "vue": "^3.4.29",
     "vuex": "^4.1.0"
   },
   "devDependencies": {

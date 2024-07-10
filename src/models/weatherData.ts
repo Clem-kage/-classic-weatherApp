@@ -1,5 +1,6 @@
 export interface weatherData {
     location: string,
     temperature: number,
-    description: string
+    description: string,
+    icon: string
 }

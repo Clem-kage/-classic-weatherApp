@@ -13,9 +13,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="cart">
-    <h1>cart</h1>
-    <p>{{ weatherItem }}</p>
+  <div class="card">
+    <h2 class="text-uppercase">{{weatherItem.location}}</h2> 
+    <p class="fw-bold">température: {{ weatherItem.temperature }}</p>
+    <p>description: {{ weatherItem.description }}</p>
   </div>
 </template>
 
@@ -23,10 +24,6 @@ export default defineComponent({
 .cart {
   border: solid red 1px;
 }
+
 </style>
 
-export const getters = {
-  weatherCity: () => store.dataTodisplay,
-}
-
-valeur en html "() => store.dataTodisplay"

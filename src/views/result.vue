@@ -19,9 +19,8 @@ import Cart from './../components/cart.vue'
 </script>
 
 <template>
-    <div class="result">
-        <Input  
-        />
+    <div class="form-floating mb-3 d-flex flex-column justify-content-center">
+        <Input/>
         <Cart/>
     </div>
 </template>
@@ -29,6 +28,7 @@ import Cart from './../components/cart.vue'
 <style scoped>
 
 .result{
-    border: solid green 1px
+    border: solid green 1px;
+    width: 100%
 }
 </style>
