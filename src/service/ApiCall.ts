@@ -23,10 +23,15 @@ try {
 const relevantDataOnly = (request:any)=>{
    const dataStructure = {
 	  location : request?.name,
-	  temperature: Number(request?.main?.temp),
+	  temperature: kelvinToCelsius(Number(request?.main?.temp)),
 	  description: request?.weather[0].description,
 	  icon: request?.weather[0].icon
    }
 
   return dataStructure
+}
+
+const kelvinToCelsius = (kelvin:number)=> {
+    // Convert Kelvin to Celsius
+    return Math.round(kelvin - 273.15);
 }

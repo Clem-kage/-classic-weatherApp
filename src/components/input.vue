@@ -33,7 +33,8 @@ export default defineComponent({
 
 <template>
   <div class="card">
-    <input class="form-floating mb-3" v-model="searchValue"  type="text" />
+    <input class="form-floating mb-3" placeholder="city" v-model="searchValue"  type="text" />
+
     <button @click="basicCall" type="button" class="btn btn-primary">call</button>
   </div>
 
