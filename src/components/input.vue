@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { apiRequest } from "./../service/ApiCall";
-import { mutations, getters } from "../store/store";
+import { mutations } from "../store/store";
 import { weatherData } from "../models/weatherData";
 
 export default defineComponent({
@@ -11,13 +11,18 @@ export default defineComponent({
     };
   },
   methods: {
+    resetForm(){
+        mutations.initWeatherForm();
+        alert('wrong city')
+    },
     async basicCall() {
       if (!this.searchValue) return;
       
       try {
         const call = await apiRequest(this.searchValue);
-        mutations.setWeatherCity(call as weatherData);
-        return call;
+        !call ? this.resetForm() : mutations.setWeatherCity(call as weatherData);
+        // console.log(call)
+        // return call;
       } catch (error) {
         console.error('Error making API call', error);
       }

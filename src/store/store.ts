@@ -11,6 +11,7 @@ export const getters = {
 
 export const mutations = {
   setWeatherCity: (weatherData: weatherData) => (store.dataTodisplay = weatherData),
+  initWeatherForm: () => (store.dataTodisplay = {} as weatherData)
 }
 
 export default {

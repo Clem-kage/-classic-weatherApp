@@ -14,9 +14,9 @@ export default defineComponent({
 
 <template>
   <div class="card">
-    <h2 class="text-uppercase">{{weatherItem.location}}</h2> 
-    <p class="fw-bold">température: {{ weatherItem.temperature }}</p>
-    <p>description: {{ weatherItem.description }}</p>
+    <h2 class="text-uppercase">{{weatherItem?.location}}</h2> 
+    <p class="fw-bold">température: {{ weatherItem?.temperature }}</p>
+    <p>description: {{ weatherItem?.description }}</p>
   </div>
 </template>
 
